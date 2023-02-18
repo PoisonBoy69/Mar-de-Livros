@@ -1,5 +1,6 @@
 import './App.css'
 import { Outlet } from 'react-router-dom'
+import { AuthProvider } from './contexts/Auth'
 
 
 
@@ -10,11 +11,11 @@ import { Outlet } from 'react-router-dom'
 const App = () => {
   return (
       <div>
-
+        <AuthProvider>
       
       <Outlet />
       
-  
+      </AuthProvider>
     </div>
   )
 }
